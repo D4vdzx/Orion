@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo ORIÓN">
+  <defs>
+    <linearGradient id="logoStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#CAC5EB"/>
+      <stop offset="100%" stop-color="#7B74B0"/>
+    </linearGradient>
+    <linearGradient id="logoRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B85C4"/>
+      <stop offset="100%" stop-color="#CAC5EB"/>
+    </linearGradient>
+  </defs>
+  <!-- orbit ring -->
+  <ellipse cx="46" cy="60" rx="34" ry="12" fill="none" stroke="url(#logoRingGrad)" stroke-width="4" stroke-linecap="round" transform="rotate(-18 46 60)"/>
+  <!-- small trailing star -->
+  <path transform="translate(76,32) scale(0.35)" d="M20 0 C22 12 28 18 40 20 C28 22 22 28 20 40 C18 28 12 22 0 20 C12 18 18 12 20 0 Z" fill="url(#logoStarGrad)"/>
+  <!-- main four point star -->
+  <path transform="translate(28,14)" d="M22 0 C24.5 15 28.5 24.5 44 27 C28.5 29.5 24.5 39 22 54 C19.5 39 15.5 29.5 0 27 C15.5 24.5 19.5 15 22 0 Z" fill="url(#logoStarGrad)"/>
+</svg>
