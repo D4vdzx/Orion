@@ -1,21 +1,12 @@
-/* =====================================================================
-   ORIÓN — Hoja de estilos base
-   FASE 1: Variables, reset, tipografía, scrollbar y animaciones globales
-   ===================================================================== */
 
-/* ---------------------------------------------------------------------
-   1. VARIABLES CSS (Design Tokens)
-   Paleta oficial de marca + extensiones de profundidad para el fondo
-   espacial y textos secundarios.
---------------------------------------------------------------------- */
 :root {
   /* --- Paleta de marca --- */
-  --color-nebula:    #231942; /* misterio, sofisticación, inteligencia */
-  --color-cosmos:    #292E5B; /* confianza, seguridad, profesionalismo */
-  --color-structure: #171A25; /* solidez, estructura, seriedad */
-  --color-starlight: #CAC5EB; /* calma, innovación, accesibilidad */
+  --color-nebula:    #231942; 
+  --color-cosmos:    #292E5B;
+  --color-structure: #171A25;
+  --color-starlight: #CAC5EB; 
 
-  /* --- Extensiones de profundidad (derivadas, no rompen la paleta) --- */
+  /* --- Extensiones de profundidad ) --- */
   --color-void:      #0A0B12; /* vacío espacial: más oscuro que la superficie de tarjetas */
   --color-void-soft:  #0F111C; /* transición entre void y structure */
   --color-mist:       #A9A4C4; /* texto secundario legible sobre fondo oscuro */
@@ -243,7 +234,7 @@ p {
 }
 
 /* ---------------------------------------------------------------------
-   5. BOTONES BASE (se amplían en fases con contenido)
+   5. BOTONES BASE
 --------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -310,7 +301,7 @@ html {
 }
 
 /* ---------------------------------------------------------------------
-   7. CANVAS DE ESTRELLAS (fondo ambiental)
+   7. CANVAS DE ESTRELLAS
 --------------------------------------------------------------------- */
 #starfield {
   position: fixed;
@@ -1315,7 +1306,7 @@ html {
   margin-inline: auto;
 }
 
-/* --- Correo empresarial (contacto principal) --- */
+/* --- Correo empresarial  --- */
 .contact-main {
   display: flex;
   align-items: center;

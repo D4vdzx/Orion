@@ -1,5 +1,4 @@
 /* =====================================================================
-   ORIÓN — Interactividad principal
    Header dinámico al hacer scroll, menú móvil accesible y
    revelado de contenido con IntersectionObserver.
    ===================================================================== */

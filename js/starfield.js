@@ -1,5 +1,4 @@
 /* =====================================================================
-   ORIÓN — Starfield ambiental
    Fondo de estrellas sutil con parpadeo, inspirado en la imagen "estetica".
    Ligero, sin dependencias, y respeta prefers-reduced-motion.
    ===================================================================== */
