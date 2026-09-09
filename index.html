@@ -295,67 +295,21 @@
 
         <div class="case-study">
 
-          <!-- Mockup simulado del panel Bellatrix -->
-          <div class="case-mockup reveal" aria-hidden="true">
+          <!-- Captura real del sistema Bellatrix en funcionamiento -->
+          <div class="case-mockup reveal">
             <div class="browser-frame">
               <div class="browser-frame__bar">
                 <span class="dot dot--red"></span>
                 <span class="dot dot--yellow"></span>
                 <span class="dot dot--green"></span>
-                <div class="browser-frame__url"><i class="fa-solid fa-lock"></i> app.ambrosia.bellatrix.co</div>
+                <div class="browser-frame__url"><i class="fa-solid fa-lock"></i> app.ambrosia.bellatrix.co/punto-de-venta</div>
               </div>
 
-              <div class="browser-frame__body">
-                <aside class="mock-sidebar">
-                  <span class="mock-sidebar__logo"><i class="fa-solid fa-star"></i></span>
-                  <i class="fa-solid fa-gauge-high is-active"></i>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-solid fa-boxes-stacked"></i>
-                  <i class="fa-solid fa-chart-simple"></i>
-                  <i class="fa-solid fa-gear"></i>
-                </aside>
-
-                <div class="mock-main">
-                  <div class="mock-stats">
-                    <div class="mock-stat">
-                      <span class="mock-stat__label">Ventas de hoy</span>
-                      <span class="mock-stat__value">$1.284.500</span>
-                    </div>
-                    <div class="mock-stat">
-                      <span class="mock-stat__label">Productos en stock</span>
-                      <span class="mock-stat__value">312</span>
-                    </div>
-                    <div class="mock-stat">
-                      <span class="mock-stat__label">Ticket promedio</span>
-                      <span class="mock-stat__value">$18.400</span>
-                    </div>
-                  </div>
-
-                  <div class="mock-chart">
-                    <span class="mock-bar" style="--h:38%"></span>
-                    <span class="mock-bar" style="--h:62%"></span>
-                    <span class="mock-bar" style="--h:48%"></span>
-                    <span class="mock-bar" style="--h:80%"></span>
-                    <span class="mock-bar" style="--h:55%"></span>
-                    <span class="mock-bar" style="--h:70%"></span>
-                    <span class="mock-bar" style="--h:92%"></span>
-                  </div>
-
-                  <div class="mock-table">
-                    <div class="mock-row mock-row--head">
-                      <span>Producto</span><span>Cant.</span><span>Total</span>
-                    </div>
-                    <div class="mock-row">
-                      <span>Torta de onces</span><span>3</span><span>$45.000</span>
-                    </div>
-                    <div class="mock-row">
-                      <span>Combo desayuno</span><span>7</span><span>$98.000</span>
-                    </div>
-                    <div class="mock-row">
-                      <span>Café + pastel</span><span>5</span><span>$62.500</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="browser-frame__screenshot">
+                <img src="assets/bellatrix-pos-preview.png"
+                  alt="Captura real del Punto de Venta de Bellatrix, con el catálogo de productos de Ambrosía y el carrito de venta"
+                  loading="lazy">
+                <span class="browser-frame__badge"><i class="fa-solid fa-circle-check"></i> Captura real del sistema</span>
               </div>
             </div>
             <div class="case-mockup__glow" aria-hidden="true"></div>
@@ -430,6 +384,60 @@
 
         <div class="contact-wrap">
 
+          <!-- Formulario de contacto (visual, sin conexión real) -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="contact-form__badge"><i class="fa-solid fa-satellite-dish"></i> Envíanos una señal</div>
+
+            <div class="contact-form__header">
+              <h3>Cuéntanos sobre tu proyecto</h3>
+              <p>Completa el formulario con los detalles de tu negocio y nuestro equipo se pondrá en
+                contacto contigo.</p>
+            </div>
+
+            <div class="contact-form__fields">
+              <div class="contact-form__grid">
+                <div class="form-field">
+                  <label for="cf-name">Nombre completo</label>
+                  <input type="text" id="cf-name" name="nombre" placeholder="Ej. Laura Gómez" required>
+                </div>
+                <div class="form-field">
+                  <label for="cf-email">Correo electrónico</label>
+                  <input type="email" id="cf-email" name="correo" placeholder="tucorreo@empresa.com" required>
+                </div>
+                <div class="form-field">
+                  <label for="cf-company">Empresa / Negocio</label>
+                  <input type="text" id="cf-company" name="empresa" placeholder="Nombre de tu negocio (opcional)">
+                </div>
+                <div class="form-field">
+                  <label for="cf-phone">Teléfono</label>
+                  <input type="tel" id="cf-phone" name="telefono" placeholder="Ej. 300 123 4567 (opcional)">
+                </div>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="cf-message">Cuéntanos los detalles de tu proyecto</label>
+                <textarea id="cf-message" name="mensaje" rows="5"
+                  placeholder="Describe qué necesita tu negocio, plazos, presupuesto estimado, etc." required></textarea>
+              </div>
+
+              <div class="contact-form__submit-row">
+                <button type="submit" class="btn btn-primary contact-form__submit">
+                  <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                </button>
+                <p class="contact-form__note">
+                  <i class="fa-solid fa-circle-info"></i> Nuestro equipo revisará tu mensaje y te responderá a la brevedad.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-form__success">
+              <i class="fa-solid fa-rocket"></i>
+              <h4>¡Tu mensaje despegó con éxito!</h4>
+              <p>Gracias por escribirnos.</p>
+              <button type="button" class="btn btn-outline" id="contactFormReset">Enviar otro mensaje</button>
+            </div>
+          </form>
+
           <!-- Correo empresarial -->
           <a href="mailto:orion.developmentstudio@gmail.com" class="contact-main reveal">
             <div class="contact-main__icon"><i class="fa-solid fa-envelope-open-text"></i></div>
@@ -493,7 +501,7 @@
         <div class="footer__social">
           <a href="#" aria-label="ORIÓN en LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://www.instagram.com/orion.devstudio/" aria-label="ORIÓN en Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="ORIÓN en GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://github.com/D4vdzx/Orion" aria-label="ORIÓN en GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
 

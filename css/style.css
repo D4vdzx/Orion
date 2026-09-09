@@ -1081,6 +1081,51 @@ html {
   min-height: 340px;
 }
 
+/* --- Captura real del sistema (reemplaza el mockup simulado) --- */
+.browser-frame__screenshot {
+  position: relative;
+  line-height: 0;
+  background: var(--surface-2);
+}
+
+.browser-frame__screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.browser-frame__badge {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: rgba(10, 11, 18, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--border-strong);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-card);
+}
+
+.browser-frame__badge i {
+  color: #61C454;
+}
+
+@media (max-width: 560px) {
+  .browser-frame__badge {
+    font-size: 0.62rem;
+    padding: 0.35rem 0.65rem;
+  }
+}
+
 .mock-sidebar {
   display: flex;
   flex-direction: column;
@@ -1304,6 +1349,168 @@ html {
 .contact-wrap {
   max-width: 760px;
   margin-inline: auto;
+}
+
+/* --- Formulario de contacto (visual, sin conexión real) --- */
+.contact-form {
+  position: relative;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, rgba(41, 46, 91, 0.4), rgba(15, 17, 28, 0.8));
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-lg);
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -35%;
+  right: -15%;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(202, 197, 235, 0.18), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contact-form__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-starlight);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-form__header h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: 0.4rem;
+}
+
+.contact-form__header p {
+  max-width: 480px;
+  margin-bottom: var(--space-lg);
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field--full {
+  margin-bottom: var(--space-md);
+}
+
+.form-field label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-mist);
+  letter-spacing: 0.02em;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(169, 164, 196, 0.55);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-starlight);
+  background: rgba(202, 197, 235, 0.06);
+  box-shadow: 0 0 0 4px rgba(202, 197, 235, 0.12);
+}
+
+.contact-form__submit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.contact-form__note {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-xs);
+  color: var(--color-mist);
+}
+
+.contact-form__note i {
+  color: var(--color-starlight);
+}
+
+/* Estado "enviado" (simulado): oculta los campos y muestra el mensaje */
+.contact-form__success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) 0 var(--space-sm);
+}
+
+.contact-form__success i {
+  font-size: 2.5rem;
+  color: var(--color-starlight);
+  filter: drop-shadow(0 0 16px rgba(202, 197, 235, 0.5));
+}
+
+.contact-form__success h4 {
+  font-size: var(--fs-lg);
+}
+
+.contact-form__success p {
+  max-width: 380px;
+  color: var(--color-mist);
+  margin-bottom: var(--space-xs);
+}
+
+.contact-form.is-sent .contact-form__fields {
+  display: none;
+}
+
+.contact-form.is-sent .contact-form__success {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .contact-form__grid { grid-template-columns: 1fr; }
+  .contact-form__submit-row { flex-direction: column; align-items: stretch; text-align: center; }
+  .contact-form__submit { width: 100%; }
 }
 
 /* --- Correo empresarial  --- */

@@ -84,4 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('currentYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* --- 6. Formulario de contacto: envío simulado (sin backend real) --- */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const resetBtn = document.getElementById('contactFormReset');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      // No hay backend: solo se simula la confirmación de envío.
+      contactForm.classList.add('is-sent');
+      contactForm.querySelector('.contact-form__success')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        contactForm.reset();
+        contactForm.classList.remove('is-sent');
+      });
+    }
+  }
+
 });
